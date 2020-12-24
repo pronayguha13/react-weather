@@ -13,12 +13,12 @@
   
 } */
 
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 
 /* Style the input container */
-#locationInputForm {
+.locationInputForm {
   display: flex;
   flex-direction: row;
   align-content: center;
@@ -26,8 +26,9 @@
 }
 
 /* Style the input fields */
-#locationInputForm input {
-  width: 500px;
+.locationInputForm input {
+  margin-left: auto;
+  margin-right: auto;
   padding: 11px 10px;
   border: 2px solid #1e90ff;
   border-radius: 20px;
@@ -37,11 +38,35 @@
   color: #290ed8;
   font-size: 1.5rem;
 }
-#locationInputForm input::placeholder {
+.locationInputForm input::placeholder {
   color: #290ed8;
 }
 
-#locationInputForm input:focus {
+.locationInputForm input:focus {
   /* border-bottom: 2px solid #1e90ff; */
   border: 2px solid #0a3ada;
+}
+
+@media only screen and (max-width: 900px) {
+  .locationInputForm input {
+    width: 450px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .locationInputForm input {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .locationInputForm input {
+    width: 200px;
+  }
+}
+
+@media only screen and (min-width: 901px) {
+  .locationInputForm input {
+    width: 600px;
+  }
 }

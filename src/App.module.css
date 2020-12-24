@@ -17,6 +17,6 @@
 .header h1 {
   width: -webkit-fill-available;
   padding-bottom: 10px;
-  border-bottom: 2px double #1e90ff;
+  border-bottom: 2px solid #1e90ff;
   color: #0f24e7;
 }
