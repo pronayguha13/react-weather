@@ -5,7 +5,11 @@ import styles from "./App.module.css";
 const App = () => {
   return (
     <div className={styles.App}>
-      <h1>Weather App</h1>
+      <div className={styles.header}>
+        <h1>
+          <img src="/icons/icon.png" alt="weather_icon" /> Weather App
+        </h1>
+      </div>
       <SearchArea />
       <ResultArea />
     </div>

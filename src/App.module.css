@@ -10,9 +10,11 @@
   padding: 20px;
   border-radius: 30px;
 }
+.header {
+  display: contents;
+}
 
-h1 {
-  align-self: flex-start;
+.header h1 {
   width: -webkit-fill-available;
   padding-bottom: 10px;
   border-bottom: 2px double #1e90ff;
