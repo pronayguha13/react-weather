@@ -10,3 +10,9 @@
   padding: 20px;
   border-radius: 30px;
 }
+
+h1 {
+  align-self: flex-start;
+  width: -webkit-fill-available;
+  border-bottom: 2px double #000;
+}
