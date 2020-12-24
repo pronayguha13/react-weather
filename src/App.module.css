@@ -14,5 +14,7 @@
 h1 {
   align-self: flex-start;
   width: -webkit-fill-available;
-  border-bottom: 2px double #000;
+  padding-bottom: 10px;
+  border-bottom: 2px double #1e90ff;
+  color: #0f24e7;
 }
