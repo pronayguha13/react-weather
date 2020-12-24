@@ -1,0 +1,47 @@
+/* #locationInputForm {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+} */
+
+/* #locationInputForm #icon {
+  font-size: 2rem;
+}*/
+/* #locationInputForm input {
+  height: 50px;
+  width: 400px;
+  
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style the input container */
+#locationInputForm {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  margin-bottom: 15px;
+}
+
+/* Style the input fields */
+#locationInputForm input {
+  width: 500px;
+  padding: 11px 10px;
+  border: 2px solid #1e90ff;
+  border-radius: 20px;
+  outline: none;
+  background-color: #eef2f7;
+  text-align: center;
+  color: #290ed8;
+  font-size: 1.5rem;
+}
+#locationInputForm input::placeholder {
+  color: #290ed8;
+}
+
+#locationInputForm input:focus {
+  /* border-bottom: 2px solid #1e90ff; */
+  border: 2px solid #0a3ada;
+}

@@ -1,11 +1,15 @@
 import React from "react";
-
+import styles from "./SearchArea.module.css";
 const SearchArea = () => {
   return (
-    <div>
-      <h3>Search Section</h3>
-      <p>Place input area</p>
-      <button type="submit">search</button>
+    <div id={styles.locationInputForm}>
+      <form action="submit">
+        <input
+          type="text"
+          placeholder="Enter your pin-code or city"
+          autoFocus
+        />
+      </form>
     </div>
   );
 };
