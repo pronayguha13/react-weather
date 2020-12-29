@@ -1,11 +1,12 @@
 import React from "react";
 import ResultCard from "./ResultCard";
 
-const ResultArea = () => {
+const ResultArea = (props) => {
+  let { location } = props;
+
   return (
     <div>
-      <h3>Result Card</h3>
-      <p>Current Location</p>
+      <p>{location}</p>
       <ResultCard />
     </div>
   );

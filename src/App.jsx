@@ -5,13 +5,15 @@ import styles from "./App.module.css";
 const App = () => {
   const [location, setLocation] = useState("");
 
-  const locationChangeHandler = (e) => {
-    if (e.key === "Enter") {
-      //call to fetch the API result
-    } else {
-      setLocation(e.target.value);
+  const enterKeyHandler = (e) => {
+    if (e.key === "Enter" && location.length) {
+      console.log("Enter key pressed");
     }
   };
+  const locationChangeHandler = (e) => {
+    setLocation(e.target.value);
+  };
+
   return (
     <div className={styles.App}>
       <div className={styles.header}>
@@ -22,8 +24,13 @@ const App = () => {
       <SearchArea
         location={location}
         locationChangeHandler={locationChangeHandler}
+        enterKeyHandler={enterKeyHandler}
       />
-      <ResultArea />
+      {location && location.length ? (
+        <ResultArea location={location} />
+      ) : (
+        <p>Enter Your City or Pin Code</p>
+      )}
     </div>
   );
 };
