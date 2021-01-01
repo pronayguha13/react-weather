@@ -6,7 +6,6 @@ const ResultArea = (props) => {
 
   return (
     <div>
-      <p>{location}</p>
       <ResultCard
         location={location}
         fetchAPIData={fetchAPIData}

@@ -3,13 +3,11 @@ import axios from "axios";
 const ResultCard = (props) => {
   const { location, fetchAPIData, fetchDataHandler } = props;
   const [weatherData, setWeatherData] = useState({});
-  console.log(
-    "🚀 ~ file: ResultCard.jsx ~ line 6 ~ ResultCard ~ weatherData",
-    weatherData
-  );
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     weatherDataHandler();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fetchAPIData]);
 
   const weatherDataHandler = () => {
@@ -22,7 +20,10 @@ const ResultCard = (props) => {
         .then((res) => {
           setWeatherData(res.data);
         })
-        .catch((err) => console.log("Error -> ", err));
+        .catch((err) => {
+          console.log("Error -> ", err);
+          setError(true);
+        });
     }
   };
   return (
@@ -30,7 +31,9 @@ const ResultCard = (props) => {
       <p>
         Current Weather at : <b>{location.toUpperCase()}</b>
       </p>
-      {Object.keys(weatherData).length !== 0 ? (
+      {error ? (
+        <p>Please enter a valid location</p>
+      ) : Object.keys(weatherData).length !== 0 ? (
         <h3>Current Temperature: {weatherData["main"]["temp"]}</h3>
       ) : null}
     </div>

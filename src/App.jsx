@@ -5,7 +5,6 @@ import styles from "./App.module.css";
 const App = () => {
   const [location, setLocation] = useState("");
   const [fetchAPIData, setFetchAPIData] = useState(false);
-  console.log("🚀 ~ file: App.jsx ~ line 8 ~ App ~ fetchAPIData", fetchAPIData);
 
   const fetchDataHandler = (newState) => {
     setFetchAPIData(newState);
@@ -13,7 +12,6 @@ const App = () => {
 
   const enterKeyHandler = (e) => {
     if (e.key === "Enter" && location.length) {
-      //on enter key press call the fetchAPI  method in the resultCard component
       fetchDataHandler(true);
     }
   };
