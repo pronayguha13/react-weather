@@ -3,8 +3,8 @@ import ResultArea from "./Components/ResultCard/ResultArea";
 import SearchArea from "./Components/SearchArea/SearchArea";
 import styles from "./App.module.css";
 const App = () => {
-  const [location, setLocation] = useState("");
-  const [fetchAPIData, setFetchAPIData] = useState(false);
+  const [location, setLocation] = useState("Kolkata");
+  const [fetchAPIData, setFetchAPIData] = useState(true);
 
   const fetchDataHandler = (newState) => {
     setFetchAPIData(newState);
@@ -39,7 +39,9 @@ const App = () => {
           fetchDataHandler={fetchDataHandler}
         />
       ) : (
-        <p>Enter Your City or Pin Code</p>
+        <p style={{ fontSize: "30px", fontWeight: 400 }}>
+          Enter Your City or Pin Code
+        </p>
       )}
     </div>
   );

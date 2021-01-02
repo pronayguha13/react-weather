@@ -28,13 +28,22 @@ const ResultCard = (props) => {
   };
   return (
     <div>
-      <p>
-        Current Weather at : <b>{location.toUpperCase()}</b>
-      </p>
       {error ? (
-        <p>Please enter a valid location</p>
+        <p style={{ fontSize: "30px", color: "rgb(255,0,0)", fontWeight: 600 }}>
+          Please enter a valid location
+        </p>
       ) : Object.keys(weatherData).length !== 0 ? (
-        <h3>Current Temperature: {weatherData["main"]["temp"]}</h3>
+        <div>
+          <p>
+            Current Weather at :{" "}
+            <b>
+              {weatherData["name"].toUpperCase() +
+                ", " +
+                weatherData["sys"]["country"]}
+            </b>
+          </p>
+          <h3>Current Temperature: {weatherData["main"]["temp"]}</h3>
+        </div>
       ) : null}
     </div>
   );
