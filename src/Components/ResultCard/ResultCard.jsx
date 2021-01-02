@@ -15,7 +15,7 @@ const ResultCard = (props) => {
       fetchDataHandler(false);
       axios
         .get(
-          `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=a745c9695747e9f3f6fc78102b03fe49&units=metric`
+          `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${process.env.REACT_APP_OWM_API_KEY}&units=metric`
         )
         .then((res) => {
           setWeatherData(res.data);
