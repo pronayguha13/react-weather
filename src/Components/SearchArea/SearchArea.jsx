@@ -7,7 +7,6 @@ const SearchArea = (props) => {
       <input
         type="text"
         placeholder="Kolkata"
-        autoFocus
         value={location}
         onChange={(e) => locationChangeHandler(e)}
         onKeyDown={(e) => enterKeyHandler(e)}
