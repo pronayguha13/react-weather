@@ -9,9 +9,7 @@ const Card = (props) => {
         <div className={styles.cardHeader}>
           <div className={styles.textHeader}>
             <h5 className="card-title">
-              {weatherData["name"].toUpperCase() +
-                ", " +
-                weatherData["sys"]["country"]}
+              {weatherData.name.toUpperCase() + ", " + weatherData.sys.country}
             </h5>
             <h6 className="card-subtitle mb-2 text-muted">
               {new Date().toLocaleString()}
@@ -21,15 +19,15 @@ const Card = (props) => {
         <div className={styles.tempData}>
           <div className={styles.tempDetails}>
             <p>
-              {weatherData["main"]["temp"]} <sup>o</sup>C
+              {weatherData.main.temp} <sup>o</sup>C
             </p>
             <img
-              src={`http://openweathermap.org/img/wn/${weatherData["weather"][0]["icon"]}.png`}
+              src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`}
               alt="weather-condition"
             />
           </div>
           <h6 className="card-subtitle mb-2 text-muted">
-            feels like: {weatherData["main"]["feels_like"]} <sup>o</sup>C
+            feels like: {weatherData.main.feels_like} <sup>o</sup>C
           </h6>
           <div className={styles.windHumidityDetails}>
             <p>
