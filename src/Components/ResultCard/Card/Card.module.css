@@ -1,0 +1,93 @@
+.Card {
+  background-color: #fff;
+  border-radius: 20px;
+  width: 600px;
+  /* border: 2px solid #538ae3; */
+  padding: 0 10px;
+  color: #404061;
+  -webkit-box-shadow: 2px -1px 30px 10px rgba(209, 217, 230, 1);
+  -moz-box-shadow: 2px -1px 30px 10px rgba(209, 217, 230, 1);
+  box-shadow: 2px -1px 30px 10px rgba(209, 217, 230, 1);
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+.cardHeader img {
+  float: right;
+}
+
+.tempData {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.tempDetails {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tempDetails p {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.windHumidityDetails {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.windHumidityDetails p {
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+.windHumidityDetails img {
+  width: 40px;
+  margin-right: 15px;
+}
+
+@media only screen and (max-width: 900px) {
+  .Card {
+    width: 450px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .Card {
+    width: 325px;
+    padding: 0 3px;
+  }
+  .tempDetails p {
+    margin: 20px 0;
+  }
+  .tempDetails img {
+    width: 25%;
+  }
+  .windHumidityDetails {
+    margin: 20px 0;
+  }
+  .windHumidityDetails p {
+    font-size: 1.5rem;
+  }
+  .windHumidityDetails img {
+    width: 35px;
+    margin-right: 5px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .Card {
+    width: 200px;
+  }
+}
+
+@media only screen and (min-width: 901px) {
+  .Card {
+    width: 600px;
+  }
+}

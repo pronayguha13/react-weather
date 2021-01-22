@@ -6,7 +6,7 @@ const SearchArea = (props) => {
     <div className={styles.locationInputForm}>
       <input
         type="text"
-        placeholder="Enter your pin-code or city"
+        placeholder="Kolkata"
         autoFocus
         value={location}
         onChange={(e) => locationChangeHandler(e)}
