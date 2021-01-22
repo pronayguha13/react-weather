@@ -1,28 +1,8 @@
-/* #locationInputForm {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-} */
-
-/* #locationInputForm #icon {
-  font-size: 2rem;
-}*/
-/* #locationInputForm input {
-  height: 50px;
-  width: 400px;
-  
-} */
-
-/* * {
-  box-sizing: border-box;
-} */
-
-/* Style the input container */
 .locationInputForm {
   display: flex;
   flex-direction: row;
   align-content: center;
-  margin-bottom: 15px;
+  margin-bottom: 45px;
 }
 
 /* Style the input fields */
@@ -30,21 +10,21 @@
   margin-left: auto;
   margin-right: auto;
   padding: 11px 10px;
-  border: 2px solid #1e90ff;
+  border: 2px solid #fff;
   border-radius: 20px;
   outline: none;
-  background-color: #eef2f7;
+  background-color: #fff;
   text-align: center;
   color: #290ed8;
   font-size: 1.5rem;
+  box-shadow: 8px 10px 18px 0 rgb(142, 143, 145);
 }
 .locationInputForm input::placeholder {
   color: #290ed8;
 }
 
 .locationInputForm input:focus {
-  /* border-bottom: 2px solid #1e90ff; */
-  border: 2px solid #0a3ada;
+  box-shadow: 8px 10px 18px 0 rgb(142, 143, 145) inset;
 }
 
 @media only screen and (max-width: 900px) {

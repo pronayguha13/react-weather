@@ -20,3 +20,9 @@
   border-bottom: 2px solid #1e90ff;
   color: #0f24e7;
 }
+
+@media only screen and (min-width: 900px) {
+  .App {
+    width: 40%;
+  }
+}
