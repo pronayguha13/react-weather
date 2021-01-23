@@ -2,9 +2,14 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Card from "./Card/Card";
 const ResultCard = (props) => {
-  const { location, fetchAPIData, fetchDataHandler } = props;
+  const {
+    location,
+    fetchAPIData,
+    fetchDataHandler,
+    isLoading,
+    setIsLoading,
+  } = props;
   const [weatherData, setWeatherData] = useState({});
-  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
 
   useEffect(() => {

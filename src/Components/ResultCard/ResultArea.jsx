@@ -2,7 +2,13 @@ import React from "react";
 import ResultCard from "./ResultCard";
 
 const ResultArea = (props) => {
-  let { location, fetchAPIData, fetchDataHandler } = props;
+  let {
+    location,
+    fetchAPIData,
+    fetchDataHandler,
+    isLoading,
+    setIsLoading,
+  } = props;
 
   return (
     <div>
@@ -10,6 +16,8 @@ const ResultArea = (props) => {
         location={location}
         fetchAPIData={fetchAPIData}
         fetchDataHandler={fetchDataHandler}
+        isLoading={isLoading}
+        setIsLoading={setIsLoading}
       />
     </div>
   );
